@@ -50,7 +50,10 @@ private
 
   def post_data
     post = Post.find(params[:id])
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8dbac153abd82fc006b4f6003e5d976ebb2f32db
     render json: PostSerializer.serialize(post)
 
 end

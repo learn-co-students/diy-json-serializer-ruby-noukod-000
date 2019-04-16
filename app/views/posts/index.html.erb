@@ -6,9 +6,14 @@
 $(function () {
   $(".js-more").on('click', function() {
     var id = $(this).data("id");
+<<<<<<< HEAD
       $.getJSON("/posts/" + id + "/post_data", function(data) {
+=======
+    $.get("/posts/" + id + "/post_data", function(data) {
+>>>>>>> 8dbac153abd82fc006b4f6003e5d976ebb2f32db
       // Replace text of body-id div
-      $("#body-" + id).text(data);
+      $("#body-" + id).text(data["description"]);
+      $("#body-" + id).text(data["title"]);
     });
   });
 });
